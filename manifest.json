@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Google Scholar Article Extractor",
+  "version": "1.3",
+  "description": "Extracts article names from Google Scholar search results",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://scholar.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://scholar.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

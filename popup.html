@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Scholar Article Extractor</title>
+    <style>
+      body {
+        width: 400px;
+        padding: 16px;
+        font-family: Arial, sans-serif;
+      }
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 16px;
+      }
+      button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      input[type="number"] {
+        width: 50px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+      #status {
+        margin-top: 16px;
+        font-style: italic;
+      }
+      #articleList {
+        margin-top: 16px;
+      }
+      .article {
+        background-color: #f1f1f1;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+      .article h3 {
+        margin: 0 0 5px 0;
+        color: #1a0dab;
+      }
+      .article p {
+        margin: 0;
+        font-size: 0.9em;
+        color: #006621;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Google Scholar Article Extractor</h2>
+    <p>Enter the number of pages to extract and click the button below.</p>
+    <div>
+      <label for="pagesInput">Pages:</label>
+      <input type="number" id="pagesInput" min="1" value="1" />
+      <button id="extractButton">Extract Articles</button>
+    </div>
+    <div id="status"></div>
+    <div id="articleList"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
